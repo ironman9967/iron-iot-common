@@ -7,7 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "bump": "npm version $1",
     "release": "chmod +x ./scripts/release.sh && ./scripts/release.sh v$(cat package.json | grep version | head -1 | awk -F: '{ print $2 }' | sed 's/[\",]//g' | tr -d '[[:space:]]')",
-    "release-patch": "npm run bump -- patch && npm run release"
+    "release-patch": "npm run bump -- patch && npm run release",
+    "release-minor": "npm run bump -- minor && npm run release"
   },
   "repository": {
     "type": "git",
