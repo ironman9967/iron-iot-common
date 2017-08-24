@@ -32,7 +32,7 @@ echo 'echo "starting $IRON_IOT_MODEL app"' >> $script
 echo 'chmod +x $APP_PATH/common/scripts/start.sh' >> $script
 echo '$APP_PATH/common/scripts/start.sh' >> $script
 
-chmod +x $script
+sudo chmod +x $script
 
 sudo systemctl stop $desc
 sudo systemctl disable $desc
