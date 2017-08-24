@@ -42,4 +42,6 @@ sudo systemctl daemon-reload
 echo -e "[Unit]\nDescription=$desc\nAfter=network.target\n\n[Service]\nUser=$user\nUMask=000\nExecStart=$script\nRestart=$restart\n\n[Install]\nWantedBy=multi-user.target\n" | sudo tee "/etc/systemd/system/$desc.service"
 sudo systemctl enable $desc
 sudo systemctl start $desc
-sudo systemctl status $desc
+now=$(date +"%Y-%m-%d %H:%M:%S")
+echo "------------------->   starting $now"
+sudo journalctl -u $desc --no-pager --since "$now"
