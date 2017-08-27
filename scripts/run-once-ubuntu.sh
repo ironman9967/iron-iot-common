@@ -20,6 +20,7 @@ echo '#!/bin/bash' >> $script
 echo 'export IRON_IOT_MODEL='$IRON_IOT_MODEL >> $script
 echo 'export CLOUD_URI='$CLOUD_URI >> $script
 echo 'export GITHUB_API_URI='$GITHUB_API_URI >> $script
+echo 'export GITHUB_WEBHOOK_SECRET='$GITHUB_WEBHOOK_SECRET >> $script
 echo 'export ARMB_1_URI='$ARMB_1_URI >> $script
 echo 'export APP_PATH='$APP_PATH >> $script
 echo 'chmod 777 $HOME' >> $script
