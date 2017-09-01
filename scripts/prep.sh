@@ -13,10 +13,10 @@ releaseUrl=$GITHUB_API_URI/repos/ironman9967/iron-iot-common/releases/latest
 
 echo "requesting latest release from $releaseUrl"
 res=`curl -H "Accept: application/vnd.github.v3+json" $releaseUrl`
-
-if [ $? -ne 0 ]
+exitCode = $?
+if [ exitCode -ne 0 ]
 then
-	echo "!!! ERROR REQUESTING LATEST RELEASE ---> exit code" $?
+	echo "!!! ERROR REQUESTING LATEST RELEASE ---> exit code" exitCode
 	echo $res
 	exit 1
 else
