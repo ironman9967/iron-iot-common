@@ -20,7 +20,6 @@ then
 	echo $res
 	exit 1
 else
-then
 	echo 'common prep downloaded successfully'
 fi
 
