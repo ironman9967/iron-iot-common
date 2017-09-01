@@ -2,7 +2,7 @@
 #################################
 # !!!  RUN CONFIG.SH FIRST  !!! #
 #################################
-if [ "$IRON_IOT_MODEL" == "" ] || [ "$user" == "" ] || [ "$GITHUB_API_URI" == "" ] || [ "$CLOUD_URI" == "" ] || [ "$ARMB_1_URI" == "" ] || [ "$APP_PATH" == "" ]; then
+if [ "$IRON_IOT_MODEL" == "" ] || [ "$user" == "" ] || [ "$GITHUB_API_URI" == "" ] || [ "$CLOUD_URI" == "" ] || [ "$APP_PATH" == "" ]; then
 	echo "ERROR: missing variables, did you run config.sh?"
 	exit 1
 fi

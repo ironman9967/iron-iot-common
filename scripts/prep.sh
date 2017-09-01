@@ -15,7 +15,7 @@ echo "requesting latest release from $releaseUrl"
 res=`curl -H "Accept: application/vnd.github.v3+json" $releaseUrl`
 error=`echo $res | grep -o 'message.*'`
 
-if [ "$error" != "" ]
+if [ $? -eq 0 ]
 then
 	echo "!!! ERROR REQUESTING LATEST RELEASE !!!"
 	echo $res
