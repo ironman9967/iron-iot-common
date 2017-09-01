@@ -13,7 +13,6 @@ releaseUrl=$GITHUB_API_URI/repos/ironman9967/iron-iot-common/releases/latest
 
 echo "requesting latest release from $releaseUrl"
 res=`curl -H "Accept: application/vnd.github.v3+json" $releaseUrl`
-error=`echo $res | grep -o 'message.*'`
 
 if [ $? -eq 0 ]
 then
