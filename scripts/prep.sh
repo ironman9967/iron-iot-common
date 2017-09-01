@@ -14,13 +14,13 @@ releaseUrl=$GITHUB_API_URI/repos/ironman9967/iron-iot-common/releases/latest
 echo "requesting latest release from $releaseUrl"
 res=`curl -H "Accept: application/vnd.github.v3+json" $releaseUrl`
 
-if [ $? -eq 0 ]
+if [ $? -ne 0 ]
 then
 	echo "!!! ERROR REQUESTING LATEST RELEASE ---> exit code" $?
 	echo $res
 	exit 1
 else
-	echo "common prep downloaded successfully ---> exit code" $?
+	echo "common prep downloaded successfully"
 fi
 
 url=`echo $res | grep -o 'tarball_url.*' | grep -o 'http[^",]*'`
