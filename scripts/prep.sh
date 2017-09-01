@@ -19,6 +19,9 @@ then
 	echo "!!! ERROR REQUESTING LATEST RELEASE !!!"
 	echo $res
 	exit 1
+else
+then
+	echo 'common prep downloaded successfully'
 fi
 
 url=`echo $res | grep -o 'tarball_url.*' | grep -o 'http[^",]*'`
