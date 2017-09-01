@@ -16,7 +16,11 @@ res=`curl -H "Accept: application/vnd.github.v3+json" $releaseUrl`
 exitCode=$?
 if [ $exitCode -ne 0 ]
 then
-	echo "!!! ERROR REQUESTING LATEST RELEASE ---> exit code" exitCode
+	echo "!!! ERROR REQUESTING LATEST RELEASE ---> exit code" $exitCode
+	if [ $exitCode -eq 7 ]
+	then
+		echo "If you're using the github mock api, is it running?"
+	fi
 	echo $res
 	exit 1
 else
