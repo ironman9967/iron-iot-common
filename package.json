@@ -1,6 +1,6 @@
 {
   "name": "iron-iot-common",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "description": "download and run build:  `rm -rf build.sh && wget https://raw.githubusercontent.com/ironman9967/iron-iot-common/master/scripts/build.sh && chmod +x build.sh && ./build.sh [cloud or hub]`",
   "main": "index.js",
   "scripts": {
